@@ -18,7 +18,7 @@ class Search extends React.Component {
 
     render() {
         return (
-            <div className="ui search">
+            <div className="ui fluid icon input">
                 <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="ui icon input">
                         <input type="text" placeholder="Search youtube videos" value={this.state.query} onChange={this.onInputChange} />

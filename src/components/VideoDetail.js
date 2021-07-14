@@ -1,18 +1,16 @@
 import React from 'react';
-import './styles.css';
-
 
 const VideoDetail = ({ video }) => {
 
     if (!video) {
-        return <h4>Loading...please wait</h4>
+        return <h4>Start typing please...</h4>
     }
 
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
     return (
 
-        <div>
+        <div className="content">
             <div className="content">
                 <iframe title={video.title} styles={{ width: '450px', height: '300px' }} src={videoSrc} />
             </div>
