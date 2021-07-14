@@ -1,5 +1,6 @@
 import React from 'react';
 import Search from './Search';
+import VideoDetail from './VideoDetail';
 import youtubeapi from '../apis/youtubeapi';
 
 class App extends React.Component {
@@ -19,8 +20,13 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="ui container">
+            <div className="ui container ui-container">
                 <Search onFormSubmit={this.onQuerySubmit} />
+                <div className="ui grid">
+                    <div className="seven wide column">
+                        <VideoDetail video={this.state.selected} />
+                    </div>
+                </div>
             </div>
         );
     }
